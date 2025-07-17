@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - minato project</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/vendors/css-rest.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/vendors/gsap.min.js" defer></script>
+    <script src="scripts/vendors/scroll-polyfill.js" defer></script>
+    <script src="scripts/libs/scroll.js" defer></script>
+    <script src="scripts/libs/mobile-menu.js" defer></script>
+    <script src="scripts/libs/text-animation.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <div class="nav-trigger"></div>
+        <header class="header">
+          <div class="header__inner appear up">
+            <div class="logo item">
+              <h1 class="logo__title">
+                <span class="logo__title-m">m</span>inato
+                <span class="logo__title-p">p</span>roject
+              </h1>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li item"><a href="#">Top</a></li>
+                <li class="header__li item"><a href="#">Works</a></li>
+                <li class="header__li item"><a href="#">Biography</a></li>
+                <li class="header__li item"><a href="#">History</a></li>
+                <li class="header__li item">
+                  <a href="https://blog.minatoproject.com/" target="_blank">Blog</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="content">
+          <main>
+            <!-- 成果物 -->
+            <section class="works">
+              <div class="works__header">
+                <h2 class="main-title tween-animate-title">
+                  Works
+                </h2>
+                <p class="sub-title tween-animate-title">
+                  成果物
+                </p>
+              </div>
+              <div class="works__inner"></div>
+            </section>
+            <!-- 自己紹介 -->
+            <section class="biography">
+              <div class="biography__header">
+                <h2 class="main-title tween-animate-title">
+                  Biography
+                </h2>
+                <p class="sub-title tween-animate-title">
+                  自己紹介
+                </p>
+              </div>
+              <div class="biography__inner"></div>
+            </section>
+            <!-- 略歴 -->
+            <section class="history">
+              <div class="history__header">
+                <h2 class="main-title tween-animate-title">
+                  History
+                </h2>
+                <p class="sub-title tween-animate-title">
+                  略歴
+                </p>
+              </div>
+              <div class="history__inner"></div>
+            </section>
+          </main>
+        </div>
+        <footer class="footer">
+          <div class="footer__inner appear up">
+            <div class="logo item">
+              <span class="logo__title">&copy; 2025 Ryosuke Uchiyama</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
