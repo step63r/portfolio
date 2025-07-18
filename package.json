@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio web site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step63r/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/step63r/portfolio/issues"
+  },
+  "homepage": "https://github.com/step63r/portfolio#readme",
+  "devDependencies": {
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
