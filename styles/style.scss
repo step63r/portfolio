@@ -22,6 +22,20 @@ main {
   position: relative;
 }
 
+.logo {
+  &__title {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  &__title-m {
+    color: $cAlbBlue;
+  }
+  &__title-p {
+    color: $cAlbOrange;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -87,19 +101,6 @@ main {
       // 2023/10 モバイル時font-size: 35px になるように修正
       // font-size: 35px;
       justify-content: flex-start;
-    }
-
-    &__title {
-      font-size: 24px;
-      font-weight: normal;
-    }
-
-    &__title-m {
-      color: $cAlbBlue;
-    }
-
-    &__title-p {
-      color: $cAlbOrange;
     }
   }
 }

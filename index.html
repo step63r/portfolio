@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="styles/vendors/css-rest.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/vendors/gsap.min.js" defer></script>
     <script src="scripts/vendors/scroll-polyfill.js" defer></script>
     <script src="scripts/libs/scroll.js" defer></script>
@@ -38,7 +39,9 @@
               <ul class="header__ul">
                 <li class="header__li item"><a href="#">Top</a></li>
                 <li class="header__li item"><a href="#works">Works</a></li>
-                <li class="header__li item"><a href="#biography">Biography</a></li>
+                <li class="header__li item">
+                  <a href="#biography">Biography</a>
+                </li>
                 <li class="header__li item"><a href="#history">History</a></li>
                 <li class="header__li item">
                   <a href="https://blog.minatoproject.com/" target="_blank"
@@ -47,6 +50,12 @@
                 </li>
               </ul>
             </nav>
+            <!-- モバイル用のハンバーガーメニュー -->
+            <button class="mobile-menu__btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </header>
         <div class="content">
@@ -85,7 +94,9 @@
                     <div class="hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/MahjongScoreManager_MUI.png)"
+                        style="
+                          background-image: url(images/MahjongScoreManager_MUI.png);
+                        "
                       ></div>
                     </div>
                   </div>
@@ -107,7 +118,9 @@
                     <div class="hover-darken">
                       <div
                         class="bg-img-zoom img-bg50"
-                        style="background-image: url(images/ChatAIFluentWpf.png)"
+                        style="
+                          background-image: url(images/ChatAIFluentWpf.png);
+                        "
                       ></div>
                     </div>
                   </div>
@@ -159,11 +172,15 @@
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2012.03</div>
-                    <div class="history__item__body">新潟県立三条高等学校 卒業</div>
+                    <div class="history__item__body">
+                      新潟県立三条高等学校 卒業
+                    </div>
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2012.07</div>
-                    <div class="history__item__body">普通自動車第一種運転免許 取得</div>
+                    <div class="history__item__body">
+                      普通自動車第一種運転免許 取得
+                    </div>
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2013.10</div>
@@ -175,15 +192,21 @@
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2015.03</div>
-                    <div class="history__item__body">実用英語技能検定 準1級 取得</div>
+                    <div class="history__item__body">
+                      実用英語技能検定 準1級 取得
+                    </div>
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2016.03</div>
-                    <div class="history__item__body">新潟大学経済学部経済学科 卒業</div>
+                    <div class="history__item__body">
+                      新潟大学経済学部経済学科 卒業
+                    </div>
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2016.04</div>
-                    <div class="history__item__body">メーカー系SIer 入社（在籍中）</div>
+                    <div class="history__item__body">
+                      メーカー系SIer 入社（在籍中）
+                    </div>
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2016.04</div>
@@ -195,11 +218,15 @@
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2024.02</div>
-                    <div class="history__item__body">AWS Certified Solutions Architect - Associate 取得</div>
+                    <div class="history__item__body">
+                      AWS Certified Solutions Architect - Associate 取得
+                    </div>
                   </div>
                   <div class="history__item item">
                     <div class="history__item__date">2024.10</div>
-                    <div class="history__item__body">ファイナンシャル・プランニング技能士 3級 取得</div>
+                    <div class="history__item__body">
+                      ファイナンシャル・プランニング技能士 3級 取得
+                    </div>
                   </div>
                 </div>
               </div>
@@ -214,6 +241,36 @@
           </div>
         </footer>
       </div>
+      <nav class="mobile-menu">
+        <div class="logo">
+          <p class="logo__title">
+            <span class="logo__title-m">m</span>inato
+            <span class="logo__title-p">p</span>roject
+          </p>
+        </div>
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">Top</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#works">Works</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#biography">Biography</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#history">History</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a
+              class="mobile-menu__link"
+              href="https://blog.minatoproject.com/"
+              target="_blank"
+              >Blog</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>

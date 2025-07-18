@@ -1,3 +1,9 @@
+// jQuery
+$(".mobile-menu__item a[href]").on('click', function (event) {
+  const container = document.querySelector("#global-container");
+  container.classList.toggle("menu-open");
+});
+
 class Main {
   #observers = [];
 
@@ -7,7 +13,7 @@ class Main {
   }
 
   #init() {
-    // new MobileMenu();
+    new MobileMenu();
     // Pace.on("done", this.#scrollInit.bind(this));
     this.#scrollInit();
   }
@@ -50,4 +56,5 @@ class Main {
     }
   }
 }
+
 const main = new Main();
