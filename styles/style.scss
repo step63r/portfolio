@@ -2,7 +2,7 @@
 @use "parts/appear" as *;
 @use "parts/button" as *;
 @use "parts/common" as *;
-@use "parts/image-slide" as *;
+// @use "parts/image-slide" as *;
 @use "parts/mobile-menu" as *;
 @use "parts/text-amination" as *;
 
@@ -20,7 +20,6 @@
 
 main {
   position: relative;
-  z-index: -1;
 }
 
 .header {
@@ -110,44 +109,151 @@ main {
 }
 
 .works {
-  @extend .content-width;
   @extend .mb-lg;
 
-  & .main-title, .sub-title {
+  &__header {
+    & .main-title, .sub-title {
     text-align: center;
+    }
   }
 
   &__inner {
+    @extend .content-width;
+    @extend .flex;
+    position: relative;
     background-color: $cBgGray;
-    height: 500px;
+    justify-content: space-between;
+    padding: 1em;
+
+    @include mq(md) {
+      padding: 1.5em;
+    }
+    
+    @include mq(lg) {
+      padding: 2em;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    @extend .mb-sm;
+    @extend .font-lr;
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+
+    @include mq(md) {
+      flex-basis: 48%;
+    }
+
+    @include mq(lg) {
+      flex-basis: 31%;
+      margin-bottom: 1em;
+    }
+
+    @include mq(xl) {
+      margin-bottom: 2em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .biography {
-  @extend .content-width;
   @extend .mb-lg;
 
-  & .main-title, .sub-title {
+  &__header {
+    & .main-title, .sub-title {
     text-align: center;
+    }
   }
 
   &__inner {
+    @extend .content-width;
+    @extend .flex;
+    position: relative;
     background-color: $cBgGray;
-    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    @include mq(lg) {
+      padding: 2em 15px;
+    }
+  }
+
+  &__img {
+    @extend .mb-sm;
+    height: 200px;
+    object-fit: contain;
+
+    @include mq(md) {
+      margin-bottom: 0;
+      margin-right: 2em;
+    }
+  }
+
+  &__body {
+    @include mq(md) {
+      display: flex;
+      align-items: flex-end;
+      flex-basis: 47%;
+    }
   }
 }
 
 .history {
-  @extend .content-width;
   @extend .mb-lg;
 
-  & .main-title, .sub-title {
+  &__header {
+    & .main-title, .sub-title {
     text-align: center;
+    }
   }
 
   &__inner {
+    @extend .content-width;
+    position: relative;
     background-color: $cBgGray;
-    height: 500px;
+    padding: 15px;
+
+    @include mq(lg) {
+      padding: 2em 15px;
+    }
+  }
+
+  &__wrapper {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__item {
+    @extend .flex;
+    margin-bottom: 0.8em;
+
+    @include mq(md) {
+      margin-bottom: 1em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__date {
+      margin-right: 1em;
+
+      @include mq(md) {
+        margin-right: 2em;
+      }
+    }
   }
 }
 
@@ -158,4 +264,53 @@ main {
   &__inner {
     @extend .content-width;
   }
+}
+
+.img-bg50 {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    padding-top: 50%;
+  }
+}
+
+.hover-darken {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+
+    // @include animation(
+    //   $name: kf-img-show,
+    //   $duration: 1.6s,
+    //   $timing-function: ease-in-out,
+    //   $fill-mode: none
+    // );
+  }
+  &:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.img-zoom {
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.bg-img-zoom {
+  // background-image: url(images/image-1.jpg);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // width: 100%;
+  @extend .img-zoom;
 }

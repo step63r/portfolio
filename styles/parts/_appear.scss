@@ -23,7 +23,7 @@ $pattern: (
       opacity: 1;
       transform: none;
 
-      @for $i from 1 through 10 {
+      @for $i from 1 through 100 {
         &:nth-child(#{$i}) {
           transition-delay: $i * 0.1s;
         }
