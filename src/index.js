@@ -1,3 +1,16 @@
+import "./index.scss";
+import "./scripts/vendors/gsap.min.js";
+import "./scripts/vendors/scroll-polyfill.js";
+import MobileMenu from "./scripts/libs/mobile-menu";
+import TweenTextAnimation from "./scripts/libs/text-animation";
+import ScrollObserver from "./scripts/libs/scroll";
+
+function importAll(r) {
+  return r.keys().map(r);
+};
+
+const images = importAll(require.context("./images", false, /^(?!.*favicon\.png$).*\.png$|\.jpe?g$|\.svg$/));
+
 // jQuery
 $(".mobile-menu__item a[href]").on('click', function (event) {
   const container = document.querySelector("#global-container");
@@ -30,7 +43,7 @@ class Main {
       new ScrollObserver(".appear", this.#inviewAnimation),
       new ScrollObserver(".tween-animate-title", this.#textAnimation)
     );
-    console.log(this.#observers);
+    // console.log(this.#observers);
   }
 
   #textAnimation(el, inview) {

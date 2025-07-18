@@ -15,7 +15,7 @@ class TextAnimation {
     this.DOM.el.classList.toggle("inview");
   }
 }
-class TweenTextAnimation extends TextAnimation {
+export default class TweenTextAnimation extends TextAnimation {
   constructor(el) {
     super(el);
     this.DOM.chars = this.DOM.el.querySelectorAll(".char");
