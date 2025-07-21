@@ -1,4 +1,5 @@
 import "./index.scss";
+import "./styles/vendors/css-reset.css"
 import "./scripts/vendors/gsap.min.js";
 import "./scripts/vendors/scroll-polyfill.js";
 import MobileMenu from "./scripts/libs/mobile-menu";

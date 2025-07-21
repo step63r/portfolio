@@ -191,6 +191,10 @@ main {
     align-items: center;
     padding: 15px;
 
+    @include mq(md) {
+      align-items: flex-start;
+    }
+    
     @include mq(lg) {
       padding: 2em 15px;
     }
@@ -210,8 +214,17 @@ main {
   &__body {
     @include mq(md) {
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
       flex-basis: 47%;
+    }
+  }
+
+  &__social {
+    margin-top: 1rem;
+
+    & > ul {
+      list-style-type: none;
+      padding-inline-start: 1em;
     }
   }
 }
