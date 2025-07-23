@@ -1,11 +1,10 @@
 @use "../globals" as *;
+@use "../parts/common" as *;
 
 /**************************\
   Basic Modal Styles
 \**************************/
 .modal {
-  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
-
   &__overlay {
     position: fixed;
     z-index: 200;
@@ -22,11 +21,12 @@
   &__container {
     background-color: #fff;
     padding: 30px;
-    max-width: 500px;
+    max-width: 960px;
     max-height: 100vh;
     border-radius: 4px;
     overflow-y: auto;
     box-sizing: border-box;
+    margin: 0 1.0em;
   }
 
   &__header {
@@ -55,10 +55,29 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column-reverse;
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
     color: rgba(0,0,0,.8);
+    gap: 1.0rem;
+
+    @include mq(lg) {
+      flex-direction: row;
+    }
+
+    &__body {
+      @include mq(lg) {
+        flex-basis: 40%;
+      }
+    }
+    
+    &__images {
+      @include mq(lg) {
+        flex-basis: 60%;
+      }
+    }
   }
 
   &__btn {

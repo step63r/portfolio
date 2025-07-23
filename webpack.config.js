@@ -7,6 +7,10 @@ const isDev = process.env.NODE_ENV === "development";
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: isDev ? "development" : "production",
+  performance: {
+    maxEntrypointSize: 500000,
+    maxAssetSize: 500000,
+  },
   devtool: isDev ? "source-map" : undefined,
   devServer: {
     static: {
