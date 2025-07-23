@@ -19,6 +19,20 @@ Fork and clone this repository.
 $ git clone git@github.com:yourname/portfolio.git
 ```
 
+## Usage
+
+To serve development, 
+
+```
+$ npx webpack serve --mode development
+```
+
+To build for production,
+
+```
+$ npx webpack --mode production
+```
+
 ## Contribution
 
 1. Fork this repository
