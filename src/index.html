@@ -4,18 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - minato project</title>
-    <meta name="description" content="" />
+    <meta name="description" content="minato (Ryosuke Uchiyama) のプロフィールページです。これまで制作したアプリ、サービスや経歴を掲載しています。" />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <!-- Micromodal.js -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js" defer></script>
   </head>
   <body>
     <div id="global-container">
       <div id="container">
+        <!-- 成果物のモーダル表示 -->
+        <div class="modal micromodal-slide" id="modal-1" area-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" area-modal="true" area-labelledby="modal-1-title">
+              <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">
+                  <!-- INSRET WITH JAVASCRIPT -->
+                </h2>
+                <button class="modal__close" area-label="Close modal" data-micromodal-close></button>
+              </header>
+              <main class="modal__content" id="modal-1-content">
+                <!-- INSRET WITH JAVASCRIPT -->
+              </main>
+              <footer class="modal__footer">
+                <button class="modal__btn modal__btn-primary" id="modal-1-reposbutton">
+                  <!-- INSRET WITH JAVASCRIPT -->
+                </button>
+                <button class="modal__btn" data-micromodal-close area-label="Close modal">閉じる</button>
+              </footer>
+            </div>
+          </div>
+        </div>
         <div class="mobile-menu__cover"></div>
         <div class="nav-trigger"></div>
         <header class="header">
@@ -58,7 +87,7 @@
                 <p class="sub-title tween-animate-title">成果物</p>
               </div>
               <div class="works__inner appear up">
-                <div class="works__item item">
+                <div class="works__item item" data-micromodal-trigger="modal-1" data-id="todocorewpf">
                   <div class="works__img">
                     <div class="hover-darken">
                       <div
@@ -69,7 +98,7 @@
                   </div>
                   <p class="works__title">タスク管理ソフト</p>
                 </div>
-                <div class="works__item item">
+                <div class="works__item item" data-micromodal-trigger="modal-1" data-id="openjinro">
                   <div class="works__img">
                     <div class="hover-darken">
                       <div
@@ -80,7 +109,7 @@
                   </div>
                   <p class="works__title">人狼GMサーバ</p>
                 </div>
-                <div class="works__item item">
+                <div class="works__item item" data-micromodal-trigger="modal-1" data-id="mahjong">
                   <div class="works__img">
                     <div class="hover-darken">
                       <div
@@ -93,7 +122,7 @@
                   </div>
                   <p class="works__title">麻雀得点計算ソフト</p>
                 </div>
-                <div class="works__item item">
+                <div class="works__item item" data-micromodal-trigger="modal-1" data-id="destboard">
                   <div class="works__img">
                     <div class="hover-darken">
                       <div
@@ -104,7 +133,7 @@
                   </div>
                   <p class="works__title">行先予定表電子ペーパー</p>
                 </div>
-                <div class="works__item item">
+                <div class="works__item item" data-micromodal-trigger="modal-1" data-id="chataifluentwpf">
                   <div class="works__img">
                     <div class="hover-darken">
                       <div
@@ -117,7 +146,7 @@
                   </div>
                   <p class="works__title">OpenAIボイチャソフト</p>
                 </div>
-                <div class="works__item item">
+                <div class="works__item item" data-micromodal-trigger="modal-1" data-id="tsundoku">
                   <div class="works__img">
                     <div class="hover-darken">
                       <div

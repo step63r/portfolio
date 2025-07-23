@@ -5,6 +5,7 @@
 // @use "parts/image-slide" as *;
 @use "styles/parts/mobile-menu" as *;
 @use "styles/parts/text-amination" as *;
+@use "styles/parts/modal" as *;
 
 #container {
   position: relative;
@@ -153,6 +154,7 @@ main {
 
   &__item {
     position: relative;
+    cursor: pointer;
 
     @include mq(md) {
       flex-basis: 48%;
