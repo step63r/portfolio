@@ -25,36 +25,42 @@ const works = {
     content: "Windows向けのシンプルなタスク管理ソフトです。カテゴリの自由作成、ソート順、優先度による色付けなどを実装しています。通知領域への常駐、ホットキーでのウィンドウ表示にも対応します。",
     repos: "https://github.com/step63r/ToDoCoreWpf",
     images: ["./asset/ToDoCoreWpf.png"],
+    stacks: ["Windows", ".NET", "WPF", "C#"],
   },
   openjinro: {
-    title: "人狼GMサーバ (open-jinro)",
+    title: "人狼GMサーバ (Open人狼)",
     content: "人狼ゲームをオンラインで進行するためのWebアプリケーションです。WebSocketでリアルタイム進行に対応します。クラウドSDKを使っていないため、どのようなWebサーバでも動作可能なのが特長です。",
     repos: "https://github.com/step63r/open-jinro-frontend",
     images: ["./asset/open-jinro.png"],
+    stacks: ["Web", "React", "Material UI", "WebSocket", "TypeScript", "Redis"],
   },
   mahjong: {
     title: "麻雀得点計算ソフト",
     content: "麻雀の得点を計算、保存、集計するツールです。対局ごとにルールを設定できるのが特長です。",
     repos: "https://github.com/step63r/MahjongScoreManager_MUI",
     images: ["./asset/MahjongScoreManager_MUI.png"],
+    stacks: ["Windows", ".NET Framework", "WPF", "C#"],
   },
   destboard: {
     title: "行先予定表電子ペーパー",
     content: "会社でよく用いられる行先表示板を、ラズパイと電子ペーパーで実現しました。電子ペーパーでは在籍状態のトグルおよび行き先の表示に対応します。またWebサーバの機能も搭載しており、各メンバーのPCから表示板の確認・更新が可能となっています。",
     repos: "https://github.com/step63r/destboard",
     images: ["./asset/destboard.png"],
+    stacks: ["Web", "React", "Material UI", "TypeScript", "Linux", "Raspberry Pi", "e-Paper", "Python 3"],
   },
   chataifluentwpf: {
     title: "OpenAIボイチャソフト (Chat AI Fluent Wpf)",
     content: "ChatGPTと会話するシンプルなチャットアプリです。音声入力を文字列化してChatGPTに送り、返ってきた内容を合成音声で喋らせます。",
     repos: "https://github.com/step63r/ChatAIFluentWpf",
     images: ["./asset/ChatAIFluentWpf.png"],
+    stacks: ["Windows", ".NET", "WPF", "C#", "C++/CLI", "Azure AI Services", "Generative AI", "VOICEVOX CORE"],
   },
   tsundoku: {
     title: "書籍管理サービス (ツンドク.com)",
     content: "本のバーコードを読み取るだけで登録可能な、シンプルな書籍管理サービスです。続き物のマンガや小説など、同じ巻を重複して買うことを防止できます。",
     repos: "https://github.com/step63r/sam-ayano",
     images: ["./asset/tsundoku.png"],
+    stacks: ["Web", "React", "Material UI", "TypeScript", "Amazon Web Services", "Node.js"],
   },
 };
 
@@ -127,17 +133,26 @@ class Main {
         const id = trigger?.dataset.id;
 
         const title = works[id].title || "Title";
+        const stacks = works[id].stacks || [];
         const content = works[id].content || "Content";
         const images = works[id].images || [];
         const repos = works[id].repos || "Repos";
 
         const titleArea = modal.querySelector("#modal-1-title");
+        const contentStacksArea = modal.querySelector("#modal-1-content-stacks");
         const contentBodyArea = modal.querySelector("#modal-1-content-body");
         const contentImagesArea = modal.querySelector("#modal-1-content-images");
         const reposArea = modal.querySelector("#modal-1-reposbutton");
 
         if (titleArea) {
           titleArea.innerHTML = title;
+        }
+        if (contentStacksArea) {
+          let innerHTML = "";
+          for (const stack of stacks) {
+            innerHTML += `<span>${stack}</span>`;
+          }
+          contentStacksArea.innerHTML = innerHTML;
         }
         if (contentBodyArea) {
           contentBodyArea.innerHTML = `<p>${content}</p>`;

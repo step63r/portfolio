@@ -68,8 +68,28 @@
     }
 
     &__body {
+      margin-bottom: 1.0em;
       @include mq(lg) {
         flex-basis: 40%;
+      }
+    }
+
+    &__stacks {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5em;
+
+      & > span {
+        font-size: 0.8em;
+        background-color: $cBgGray;
+        border-radius: 0.3em;
+        padding: 2px 0.8em;
+
+        // &::before {
+        //   content: "#";
+        //   margin-right: 2px;
+        // }
       }
     }
     
