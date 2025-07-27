@@ -223,10 +223,19 @@ main {
 
   &__social {
     margin-top: 1rem;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
 
-    & > ul {
-      list-style-type: none;
-      padding-inline-start: 1em;
+    @include mq(lg) {
+      font-size: 2.5em;
+    }
+
+    & > a {
+      color: inherit;
+      text-decoration: none;
     }
   }
 }
