@@ -26,6 +26,24 @@ const works = {
     repos: "https://github.com/step63r/ToDoCoreWpf",
     images: ["./asset/ToDoCoreWpf.png"],
     stacks: ["Windows", ".NET", "WPF", "C#"],
+    files: [
+      {
+        name: "説明資料(1)",
+        url: "https://speakerdeck.com/step63r/wpfdeshi-jian-apurikai-fa-di-zhang-windowsapurifalseli-shi",
+      },
+      {
+        name: "説明資料(2)",
+        url: "https://speakerdeck.com/step63r/wpfdeshi-jian-apurikai-fa-di-er-zhang-ui",
+      },
+      {
+        name: "説明資料(3)",
+        url: "https://speakerdeck.com/step63r/wpfdeshi-jian-apurikai-fa-di-san-zhang-ji-neng-falseshi-zhuang-part-1",
+      },
+      {
+        name: "説明資料(4)",
+        url: "https://speakerdeck.com/step63r/wpfdeshi-jian-apurikai-fa-di-si-zhang-ji-neng-falseshi-zhuang-part-2"
+      },
+    ],
   },
   openjinro: {
     title: "人狼GMサーバ (Open人狼)",
@@ -33,6 +51,12 @@ const works = {
     repos: "https://github.com/step63r/open-jinro-frontend",
     images: ["./asset/open-jinro.png"],
     stacks: ["Web", "React", "Material UI", "WebSocket", "TypeScript", "Redis"],
+    files: [
+      {
+        name: "説明資料 (1)",
+        url: "https://speakerdeck.com/step63r/react-x-socket-dot-ioderen-lang-sabawozuo-ru-di-zhang-hurontoendoshi-zhuang",
+      },
+    ],
   },
   mahjong: {
     title: "麻雀得点計算ソフト",
@@ -47,6 +71,12 @@ const works = {
     repos: "https://github.com/step63r/destboard",
     images: ["./asset/destboard.png"],
     stacks: ["Web", "React", "Material UI", "TypeScript", "Linux", "Raspberry Pi", "e-Paper", "Python 3"],
+    files: [
+      {
+        name: "説明資料",
+        url: "https://speakerdeck.com/step63r/iotshi-jian-xing-xian-yu-ding-biao-wodian-zi-pepadezuo-ru",
+      },
+    ],
   },
   chataifluentwpf: {
     title: "OpenAIボイチャソフト (Chat AI Fluent Wpf)",
@@ -54,6 +84,12 @@ const works = {
     repos: "https://github.com/step63r/ChatAIFluentWpf",
     images: ["./asset/ChatAIFluentWpf.png"],
     stacks: ["Windows", ".NET", "WPF", "C#", "C++/CLI", "Azure AI Services", "Generative AI", "VOICEVOX CORE"],
+    files: [
+      {
+        name: "説明資料",
+        url: "https://speakerdeck.com/step63r/chatgptshi-jian",
+      },
+    ],
   },
   tsundoku: {
     title: "書籍管理サービス (ツンドク.com)",
@@ -61,6 +97,12 @@ const works = {
     repos: "https://github.com/step63r/sam-ayano",
     images: ["./asset/tsundoku.png"],
     stacks: ["Web", "React", "Material UI", "TypeScript", "Amazon Web Services", "Node.js"],
+    files: [
+      {
+        name: "説明資料",
+        url: "https://speakerdeck.com/step63r/awsdesabaresunashu-ji-guan-li-apuriwozuo-ru",
+      },
+    ],
   },
 };
 
@@ -136,12 +178,14 @@ class Main {
         const stacks = works[id].stacks || [];
         const content = works[id].content || "Content";
         const images = works[id].images || [];
+        const files = works[id].files || [];
         const repos = works[id].repos || "Repos";
 
         const titleArea = modal.querySelector("#modal-1-title");
         const contentStacksArea = modal.querySelector("#modal-1-content-stacks");
         const contentBodyArea = modal.querySelector("#modal-1-content-body");
         const contentImagesArea = modal.querySelector("#modal-1-content-images");
+        const filesArea = modal.querySelector("#modal-1-footer-files");
         const reposArea = modal.querySelector("#modal-1-reposbutton");
 
         if (titleArea) {
@@ -157,12 +201,24 @@ class Main {
         if (contentBodyArea) {
           contentBodyArea.innerHTML = `<p>${content}</p>`;
         }
-        if (contentImagesArea) {
+        if (contentImagesArea && images.length) {
           let innerHTML = "";
           for (const img of images) {
             innerHTML += `<img src="${img}">`;
           }
           contentImagesArea.innerHTML = innerHTML;
+        } else {
+          contentImagesArea.innerHTML = "";
+        }
+        if (files.length) {
+          let innerHTML = "<div class=\"modal__footer__files__inner\">";
+          for (const file of files) {
+            innerHTML += `<button class="modal__btn"><i class="fa-brands fa-speaker-deck"></i><a href="${file.url}" target="_blank">${file.name}</a></button>`
+          }
+          innerHTML += "</div>";
+          filesArea.innerHTML = innerHTML;
+        } else {
+          filesArea.innerHTML = "";
         }
         if (reposArea) {
           reposArea.innerHTML = `<i class="fab fa-github"></i><a href="${repos}" target="_blank">GitHub</a>`;
