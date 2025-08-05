@@ -67,7 +67,7 @@ const works = {
   },
   destboard: {
     title: "行先予定表電子ペーパー",
-    content: "会社でよく用いられる行先表示板を、ラズパイと電子ペーパーで実現しました。電子ペーパーでは在籍状態のトグルおよび行き先の表示に対応します。またWebサーバの機能も搭載しており、各メンバーのPCから表示板の確認・更新が可能となっています。",
+    content: "会社でよく用いられる行先表示板を、ラズパイと電子ペーパーで実現しました。電子ペーパーでは在席状態のトグルおよび行き先の表示に対応します。またWebサーバの機能も搭載しており、各メンバーのPCから表示板の確認・更新が可能となっています。",
     repos: "https://github.com/step63r/destboard",
     images: ["./asset/destboard.png"],
     stacks: ["Web", "React", "Material UI", "TypeScript", "Linux", "Raspberry Pi", "e-Paper", "Python 3"],
