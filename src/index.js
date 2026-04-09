@@ -104,7 +104,7 @@ const works = {
       },
     ],
   },
-  mahjong: {
+  mahjongweb: {
     title: "麻雀Web",
     content: "Web上で動作するシンプルな麻雀ゲームです。特定のクラウドSDKに依存しないため、どのような環境でもデプロイ可能です。",
     repos: "https://github.com/step63r/mahjong-web",
