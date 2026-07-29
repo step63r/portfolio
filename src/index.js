@@ -111,6 +111,13 @@ const works = {
     images: ["./asset/mahjong-web.png"],
     stacks: ["Web", "React", "TypeScript", "Node.js", "PostgreSQL"],
   },
+  household: {
+    title: "家計簿アプリ",
+    content: "Web上で動作するシンプルな家計簿アプリです。月々の費目ごとの予算を設定して予実差を集計することができます。",
+    repos: "https://github.com/step63r/household-account-book",
+    images: ["./asset/household.png"],
+    stacks: ["Web", "React", "TypeScript", "Node.js"],
+  },
 };
 
 // jQuery
