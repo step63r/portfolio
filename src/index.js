@@ -118,6 +118,13 @@ const works = {
     images: ["./asset/household.png"],
     stacks: ["Web", "React", "TypeScript", "Node.js"],
   },
+  imageClassifier: {
+    title: "Image Tag Search",
+    content: "外付けHDDに溜まった大量の画像をタグ検索できるようにする、個人用の画像分類・検索ツールです。",
+    repos: "https://github.com/step63r/local-image-classifier",
+    images: ["./asset/imageClassifier.png"],
+    stacks: ["Web", "Python", "Amazon Web Services", "PostgreSQL", 'ONNX Runtime']
+  }
 };
 
 // jQuery
